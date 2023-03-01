@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/margen_app">
+
+    <TextView
+        android:id="@+id/tvBuscador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_buscador"
+        android:textStyle="bold"
+        android:textSize="@dimen/tv_buscador_size"/>
+
+    <Button
+        android:id="@+id/btnFiltrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBuscador"
+        android:layout_marginTop="@dimen/margen_app"
+        android:text="@string/btn_filtrar"/>
+
+    <TextView
+        android:id="@+id/tvDistrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFiltrar"
+        android:layout_marginTop="@dimen/margen_app"/>
+
+
+    <FrameLayout
+        android:id="@+id/flContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDistrito"
+        android:layout_above="@id/btnConsultar"
+        android:layout_marginBottom="@dimen/margen_app"/>
+
+    <Button
+        android:id="@+id/btnConsultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_consultar"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

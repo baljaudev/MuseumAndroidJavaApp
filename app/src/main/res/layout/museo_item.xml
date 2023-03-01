@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margen_app">
+
+    <TextView
+        android:id="@+id/tvNombreMuseo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvNombreMuseo"
+        android:background="@color/black"
+        android:layout_marginTop="@dimen/margen_app"/>
+
+</RelativeLayout>
