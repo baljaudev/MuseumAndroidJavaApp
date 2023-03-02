@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     ft.add(R.id.flContenedor, new MapaFragment());
                 } else {
-                    //ft.replace(R.id.flContenedor, MapaFragment.newInstance(distrito));
+                    ft.replace(R.id.flContenedor, MapaFragment.newInstance(distrito));
                 }
                 ft.addToBackStack(null);
                 ft.commit();
@@ -75,9 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void conseguirDistrito() {
-        if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
-            limpiarFragmento();
-        }
+        limpiarFragmento();
         tvDistrito.setText("");
         FiltroDialog dialog = new FiltroDialog();
         dialog.setCancelable(false);
@@ -96,31 +94,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (item.getItemId() == R.id.menuListado) {
             tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar);
-            if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
                 limpiarFragmento();
-            }
         } else if (item.getItemId() == R.id.menuMapa) {
             tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar_mapa);
-            if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
                 limpiarFragmento();
-            }
         }
         return super.onOptionsItemSelected(item);
     }
 
     private void limpiarFragmento() {
-        tvDistrito.setText("");
-        ft = getSupportFragmentManager().beginTransaction();
-        ft.remove(getSupportFragmentManager().findFragmentById(R.id.flContenedor));
-        ft.addToBackStack(null);
-        ft.commit();
+        if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
+            tvDistrito.setText("");
+            ft = getSupportFragmentManager().beginTransaction();
+            ft.remove(getSupportFragmentManager().findFragmentById(R.id.flContenedor));
+            ft.addToBackStack(null);
+            ft.commit();
+        }
     }
 
     @Override
     public void onFiltroListener(String distrito) {
         tvDistrito.setText("Distrito: " + distrito);
         this.distrito = distrito;
-
     }
 }

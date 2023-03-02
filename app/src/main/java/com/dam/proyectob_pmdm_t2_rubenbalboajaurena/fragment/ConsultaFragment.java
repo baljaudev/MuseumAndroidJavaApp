@@ -145,8 +145,6 @@ public class ConsultaFragment extends Fragment implements View.OnClickListener{
         return view;
     }
 
-
-
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getActivity().getSystemService(getActivity().CONNECTIVITY_SERVICE);
