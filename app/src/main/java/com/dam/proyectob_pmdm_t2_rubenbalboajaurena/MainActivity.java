@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.dam.proyectob_pmdm_t2_rubenbalboajaurena.dialog.FiltroDialog;
 import com.dam.proyectob_pmdm_t2_rubenbalboajaurena.dialog.OnFiltroListener;
 import com.dam.proyectob_pmdm_t2_rubenbalboajaurena.fragment.ConsultaFragment;
+import com.dam.proyectob_pmdm_t2_rubenbalboajaurena.fragment.MapaFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnFiltroListener {
 
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
                         ft.remove(getSupportFragmentManager().findFragmentById(R.id.flContenedor));
                     }
-                    //ft.add(R.id.flContenedor, new MapaFragment());
+                    ft.add(R.id.flContenedor, new MapaFragment());
                 } else {
                     //ft.replace(R.id.flContenedor, MapaFragment.newInstance(distrito));
                 }
@@ -95,11 +96,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (item.getItemId() == R.id.menuListado) {
             tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar);
-            limpiarFragmento();
+            if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
+                limpiarFragmento();
+            }
         } else if (item.getItemId() == R.id.menuMapa) {
             tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar_mapa);
-            limpiarFragmento();
+            if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
+                limpiarFragmento();
+            }
         }
         return super.onOptionsItemSelected(item);
     }
