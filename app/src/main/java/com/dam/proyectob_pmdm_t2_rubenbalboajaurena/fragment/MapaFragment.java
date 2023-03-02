@@ -76,7 +76,7 @@ public class MapaFragment extends Fragment implements OnMapReadyCallback {
         }
 
         if (networkAvailable()) {
-            if (distrito.equals("Todos") || distrito.equals("")) {
+            if (distrito.equals(MainActivity.TODOS_DIST) || distrito.equals("")) {
                 consultarMuseos();
             } else {
                 consultarMuseosDistrito();

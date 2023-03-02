@@ -68,7 +68,7 @@ public class ConsultaFragment extends Fragment implements View.OnClickListener{
         }
 
         if (isNetworkAvailable()) {
-            if (distrito.equals("") || distrito.equals("TODOS")) {
+            if (distrito.equals("") || distrito.equals(MainActivity.TODOS_DIST)) {
                 consultarAPITodosMuseos();
             } else {
                 consultarAPIDistrito();

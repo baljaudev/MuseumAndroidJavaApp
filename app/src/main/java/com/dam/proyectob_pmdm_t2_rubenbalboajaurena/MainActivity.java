@@ -19,6 +19,7 @@ import com.dam.proyectob_pmdm_t2_rubenbalboajaurena.fragment.MapaFragment;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnFiltroListener {
 
     public static final String ARG_DISTRITO = "DISTRITO";
+    public static final String TODOS_DIST = "TODOS";
     Button btnFiltro;
     TextView tvDistrito;
     Button btnConsultar;

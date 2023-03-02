@@ -2,4 +2,5 @@
 <resources>
     <dimen name="margen_app">16dp</dimen>
     <dimen name="tv_buscador_size">25sp</dimen>
+    <dimen name="tv_size">20sp</dimen>
 </resources>
