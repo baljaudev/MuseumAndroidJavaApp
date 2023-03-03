@@ -12,7 +12,7 @@
     <string name="btn_consultar_mapa">Consultar Mapa</string>
     <string name="no_museos">No hay museos para ese distrito</string>
     <string name="tv_distrito">Distrito:</string>
-    <string name="tv_area">Área</string>
+    <string name="tv_area">Área:</string>
     <string name="tv_direccion">Dirección:</string>
     <string name="tv_descripcion">Descripción:</string>
     <string name="tv_horario">Horario:</string>

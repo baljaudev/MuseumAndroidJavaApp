@@ -29,7 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnFiltrar"
         android:layout_marginTop="@dimen/margen_app"
-        android:layout_marginBottom="@dimen/margen_app"/>
+        android:layout_marginBottom="@dimen/margen_app"
+        android:textSize="@dimen/tv_size"/>
 
 
     <FrameLayout

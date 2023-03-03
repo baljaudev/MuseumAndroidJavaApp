@@ -8,115 +8,127 @@
     tools:context=".DetalleActivity"
     android:padding="@dimen/margen_app">
 
-
-    <TextView
-        android:id="@+id/tvNombreMuseo"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="@dimen/tv_size"/>
+        android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/llDatos1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvNombreMuseo"
-        android:layout_marginTop="@dimen/margen_app">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tv_distrito"
-            android:layout_weight="1"
-            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvNombreMuseo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/tv_size"/>
 
-        <TextView
-            android:id="@+id/tvDistrito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"/>
+            <LinearLayout
+                android:id="@+id/llDatos1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNombreMuseo"
+                android:layout_marginTop="@dimen/margen_app">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_distrito"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
 
-    <LinearLayout
-        android:id="@+id/llDatos2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llDatos1"
-        android:layout_marginTop="@dimen/margen_app">
+                <TextView
+                    android:id="@+id/tvDistrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tv_area"
-            android:layout_weight="1"
-            android:textStyle="bold"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvArea"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"/>
+            <LinearLayout
+                android:id="@+id/llDatos2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDatos1"
+                android:layout_marginTop="@dimen/margen_app">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_area"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
 
-    <LinearLayout
-        android:id="@+id/llDatos3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llDatos2"
-        android:layout_marginTop="@dimen/margen_app">
+                <TextView
+                    android:id="@+id/tvArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tv_direccion"
-            android:layout_weight="1"
-            android:textStyle="bold"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvDireccion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="9"/>
+            <LinearLayout
+                android:id="@+id/llDatos3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDatos2"
+                android:layout_marginTop="@dimen/margen_app">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_direccion"
+                    android:layout_weight="1"
+                    android:textStyle="bold"/>
 
+                <TextView
+                    android:id="@+id/tvDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"/>
 
-    <TextView
-        android:id="@+id/tvDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/llDatos3"
-        android:layout_marginTop="@dimen/margen_app"
-        android:textStyle="bold"
-        android:text="@string/tv_descripcion"/>
-
-
-    <TextView
-        android:id="@+id/tvDescripcionMuseo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvDescripcion"
-        android:layout_marginTop="@dimen/margen_app"/>
+            </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/tvHorario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvDescripcionMuseo"
-        android:layout_marginTop="@dimen/margen_app"
-        android:textStyle="bold"
-        android:text="@string/tv_horario"/>
+            <TextView
+                android:id="@+id/tvDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDatos3"
+                android:layout_marginTop="@dimen/margen_app"
+                android:textStyle="bold"
+                android:text="@string/tv_descripcion"/>
 
 
-    <TextView
-        android:id="@+id/tvHorarioMuseo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvHorario"
-        android:layout_marginTop="@dimen/margen_app"/>
+            <TextView
+                android:id="@+id/tvDescripcionMuseo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDescripcion"
+                android:layout_marginTop="@dimen/margen_app"/>
+
+
+            <TextView
+                android:id="@+id/tvHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDescripcionMuseo"
+                android:layout_marginTop="@dimen/margen_app"
+                android:textStyle="bold"
+                android:text="@string/tv_horario"/>
+
+
+            <TextView
+                android:id="@+id/tvHorarioMuseo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHorario"
+                android:layout_marginTop="@dimen/margen_app"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
