@@ -30,7 +30,14 @@ public class FiltroDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setView(view);
         builder.setTitle(R.string.dialog_titulo)
-                .setPositiveButton(R.string.btnAceptar, null)
+                .setPositiveButton(R.string.btnAceptar,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                listener.onFiltroListener(spnDistritos.getSelectedItem().toString());
+                                dialog.dismiss();
+                            }
+                        })
                 .setNegativeButton(R.string.btnCancelar, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -40,19 +47,6 @@ public class FiltroDialog extends DialogFragment {
 
         AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
-
-        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface dialogInterface) {
-                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listener.onFiltroListener(spnDistritos.getSelectedItem().toString());
-                        dialog.dismiss();
-                    }
-                });
-            }
-        });
 
         return dialog;
     }

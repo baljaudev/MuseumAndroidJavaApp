@@ -50,25 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             conseguirDistrito();
         } else if (v.getId() == R.id.btnConsultar) {
             if (btnConsultar.getText().toString().equals(getString(R.string.btn_consultar_mapa))) {
-                if (tvDistrito.getText().toString().isEmpty()) {
-                    if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
-                        ft.remove(getSupportFragmentManager().findFragmentById(R.id.flContenedor));
-                    }
-                    ft.add(R.id.flContenedor, new MapaFragment());
-                } else {
-                    ft.replace(R.id.flContenedor, MapaFragment.newInstance(distrito));
-                }
+                ft.replace(R.id.flContenedor, MapaFragment.newInstance(distrito));
                 ft.addToBackStack(null);
                 ft.commit();
             } else if (btnConsultar.getText().toString().equals(getString(R.string.btn_consultar))) {
-                if (tvDistrito.getText().toString().isEmpty()) {
-                    if (getSupportFragmentManager().findFragmentById(R.id.flContenedor) != null) {
-                        ft.remove(getSupportFragmentManager().findFragmentById(R.id.flContenedor));
-                    }
-                    ft.add(R.id.flContenedor, new ConsultaFragment());
-                } else {
-                    ft.replace(R.id.flContenedor, ConsultaFragment.newInstance(distrito));
-                }
+                ft.replace(R.id.flContenedor, ConsultaFragment.newInstance(distrito));
                 ft.addToBackStack(null);
                 ft.commit();
             }
@@ -93,14 +79,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.menuListado) {
-            tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar);
-                limpiarFragmento();
         } else if (item.getItemId() == R.id.menuMapa) {
-            tvDistrito.setText("");
             btnConsultar.setText(R.string.btn_consultar_mapa);
-                limpiarFragmento();
         }
+        tvDistrito.setText("");
+        limpiarFragmento();
         return super.onOptionsItemSelected(item);
     }
 
